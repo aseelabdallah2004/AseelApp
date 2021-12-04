@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 enum ErrorResult{
     True,Flase,INCORERECT_ENAIL,INCORRECT_PASSWORD,EMPTY_FIELDS
 }
+enum RecipeType { vegetarian ,vegan ,dairyFree ,breakfast , lunch , dinner ,sweet ,salty}
 public class Utilities {
 
     private static Utilities instance;

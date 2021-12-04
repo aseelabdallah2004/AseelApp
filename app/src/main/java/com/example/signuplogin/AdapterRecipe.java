@@ -1,0 +1,81 @@
+package com.example.signuplogin;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
+
+public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder> {
+
+    private List<Recipe> mData;
+    private LayoutInflater mInflater;
+    private AdapterRecipe.ItemClickListener mClickListener;
+
+    // data is passed into the constructor
+    AdapterRecipe(Context context, List<Recipe> data) {
+        this.mInflater = LayoutInflater.from(context);
+        this.mData = data;
+    }
+
+    // inflates the row layout from xml when needed
+    @Override
+    public AdapterRecipe.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = mInflater.inflate(R.layout.row_recipe, parent, false);
+        return new AdapterRecipe.ViewHolder(view);
+    }
+
+    // binds the data to the TextView in each row
+    @Override
+    public void onBindViewHolder(AdapterRecipe.ViewHolder holder, int position) {
+        Recipe rest = mData.get(position);
+        holder.tvName.setText(rest.getName());
+        //holder.ivPhoto.setImageDrawable(rest.getPhoto());
+    }
+
+    // total number of rows
+    @Override
+    public int getItemCount() {
+        return mData.size();
+    }
+
+
+    // stores and recycles views as they are scrolled off screen
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        TextView tvName;
+        ImageView ivPhoto;
+
+        ViewHolder(View itemView) {
+            super(itemView);
+            tvName = itemView.findViewById(R.id.tvNameRecRow);
+            ivPhoto = itemView.findViewById(R.id.ivPhotoRecRow);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+        }
+    }
+
+    // convenience method for getting data at click position
+    Recipe getItem(int id) {
+        return mData.get(id);
+    }
+
+    // allows clicks events to be caught
+    void setClickListener(AdapterRecipe.ItemClickListener itemClickListener) {
+        this.mClickListener = itemClickListener;
+    }
+
+    // parent activity will implement this method to respond to click events
+    public interface ItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+}
