@@ -24,6 +24,7 @@
 
     <Button
         android:id="@+id/btnLoginMain"
+        android:onClick="loginn"
         android:layout_width="87dp"
         android:layout_height="50dp"
         android:text="log in"
@@ -40,6 +41,7 @@
 
     <Button
         android:id="@+id/btnAddRestaurant"
+        android:onClick="addRecipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="add recipe"
@@ -48,6 +50,7 @@
 
     <Button
         android:id="@+id/btnAllRestMain"
+        android:onClick="allRecipes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="All Recipes"
