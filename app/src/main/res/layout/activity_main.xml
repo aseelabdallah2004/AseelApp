@@ -11,23 +11,47 @@
         android:layout_width="130dp"
         android:layout_height="35dp"
         android:hint="name"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="117dp" />
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="134dp" />
 
     <TextView
         android:id="@+id/etPasswordMain"
         android:layout_width="129dp"
-        android:layout_height="28dp"
+        android:layout_height="52dp"
         android:hint="password"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="151dp" />
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="169dp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="95dp"
-        android:layout_height="49dp"
-        android:text="sign "
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="200dp" />
+        android:id="@+id/btnLoginMain"
+        android:layout_width="87dp"
+        android:layout_height="50dp"
+        android:text="log in"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="222dp" />
+
+    <TextView
+        android:id="@+id/tvSignupLinkMain"
+        android:layout_width="123dp"
+        android:layout_height="43dp"
+        android:text="register..."
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <Button
+        android:id="@+id/btnAddRestaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add recipe"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="515dp" />
+
+    <Button
+        android:id="@+id/btnAllRestMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Recipes"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="524dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
