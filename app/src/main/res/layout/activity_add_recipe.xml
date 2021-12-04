@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRecipe">
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/MACTVinfoAddRecipe"
+        android:layout_width="321dp"
+        android:layout_height="48dp"
+        android:hint="recipe information"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <EditText
+        android:id="@+id/ETphoneAddRecipe"
+        android:layout_width="323dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:hint="phone"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="317dp" />
+
+    <EditText
+        android:id="@+id/TvRecipeNameAddRecipe"
+        android:layout_width="321dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="Name of recipe"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="174dp" />
+
+    <Spinner
+        android:id="@+id/sprChooseAddRecipe"
+        android:layout_width="322dp"
+        android:layout_height="47dp"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <ImageView
+        android:id="@+id/IvPhotoAddRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="457dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/PTaddressAddRecipe"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="address"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="215dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

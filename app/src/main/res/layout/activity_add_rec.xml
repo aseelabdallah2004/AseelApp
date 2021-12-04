@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRecActivity">
+
+    <EditText
+        android:id="@+id/etNameAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Recipe name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <EditText
+        android:id="@+id/etDescriptionAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Recipe description..."
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <Spinner
+        android:id="@+id/spRecipeTypeAddRecipe"
+        android:layout_width="209dp"
+        android:layout_height="71dp"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="191dp" />
+
+    <ImageView
+        android:id="@+id/ivPhotoAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="427dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnAddAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="592dp" />
+
+    <EditText
+        android:id="@+id/etIngredientAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Ingredients"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <EditText
+        android:id="@+id/etNutritionAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="262dp" />
+
+    <EditText
+        android:id="@+id/etDietartInfoAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="307dp" />
+
+    <EditText
+        android:id="@+id/etStepsAddRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="352dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
