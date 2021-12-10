@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1041999511698",
+    "project_id": "aseel1-7ec26",
+    "storage_bucket": "aseel1-7ec26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041999511698:android:b92d63cbbb8bc65f04e64b",
+        "android_client_info": {
+          "package_name": "com.example.signuplogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041999511698-50956tdn81trh3et6tr167dr1idsnot0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC69OQ6GhiehYaSxqNx7QlRRlwqfuLihGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041999511698-50956tdn81trh3et6tr167dr1idsnot0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

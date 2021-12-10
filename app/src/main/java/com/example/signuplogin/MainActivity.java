@@ -15,15 +15,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-    private final Object AuthResult;
     private EditText etUsername,etPassword;
     private FirebaseServices fbs;
     private Utilities utils;
 
-    public MainActivity(Object authResult) {
-        AuthResult = authResult;
-    }
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

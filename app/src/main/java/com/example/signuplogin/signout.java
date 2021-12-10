@@ -14,7 +14,7 @@ import com.google.firebase.auth.AuthResult;
 
 public class signout extends AppCompatActivity {
     private EditText etUsername,etPassword,etConfirmPassword;
-    private FirebaceAuth auth;
+    private FirebaseServices fbs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +43,14 @@ public class signout extends AppCompatActivity {
         }
 
         // TODO: 3- Check username and password with Firebase Authentication
-        auth.createUserWithEmailAndPassword(username, password)
+        fbs.getAuth().createUserWithEmailAndPassword(username, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // TODO: commands if successful
                         } else {
-
-
-                            Toast.makeText(this, "Username or password is empty!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(signout.this, "Username or password is empty!", Toast.LENGTH_SHORT).show();
                             return;
                         }
                     }

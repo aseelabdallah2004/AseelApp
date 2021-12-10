@@ -47,7 +47,7 @@ public class AllRecActivity extends AppCompatActivity {
                                 rests.add(document.toObject(Recipe.class));
                             }
                         } else {
-                            Log.e("AllRestActivity: readData()", "Error getting documents.", task.getException());
+                            Log.e("AllRecActivity: readData()", "Error getting documents.", task.getException());
                         }
                     }
                 });

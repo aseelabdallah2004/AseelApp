@@ -6,29 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/etUsernameMain"
-        android:layout_width="130dp"
-        android:layout_height="35dp"
-        android:hint="name"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="134dp" />
-
-    <TextView
-        android:id="@+id/etPasswordMain"
-        android:layout_width="129dp"
-        android:layout_height="52dp"
-        android:hint="password"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="169dp" />
-
     <Button
         android:id="@+id/btnLoginMain"
-        android:onClick="loginn"
         android:layout_width="87dp"
         android:layout_height="50dp"
+        android:onClick="loginn"
         android:text="log in"
-        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteX="157dp"
         tools:layout_editor_absoluteY="222dp" />
 
     <TextView
@@ -36,7 +20,7 @@
         android:layout_width="123dp"
         android:layout_height="43dp"
         android:text="register..."
-        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteX="144dp"
         tools:layout_editor_absoluteY="272dp" />
 
     <Button
@@ -56,5 +40,25 @@
         android:text="All Recipes"
         tools:layout_editor_absoluteX="224dp"
         tools:layout_editor_absoluteY="524dp" />
+
+    <EditText
+        android:id="@+id/etUsernameMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <EditText
+        android:id="@+id/etPasswordMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="175dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

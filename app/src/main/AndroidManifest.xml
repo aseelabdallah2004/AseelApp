@@ -18,9 +18,7 @@
         <activity
             android:name=".AddRecActivity"
             android:exported="true" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="true" />
+
         <activity
             android:name=".SignupActivity"
             android:exported="true" />
