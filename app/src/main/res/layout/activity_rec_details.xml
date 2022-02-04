@@ -6,4 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".RecDetailsActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="158dp"
+        android:layout_height="27dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="151dp"
+        android:layout_height="31dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="124dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="150dp"
+        android:layout_height="37dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="153dp"
+        android:layout_height="28dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="149dp"
+        android:layout_height="30dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="406dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="290dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ package com.example.signuplogin;
         private String steps;
         private  RecipeType category;
         private String photo;
+
      public Recipe(){
 
     }
