@@ -10,54 +10,39 @@
         android:id="@+id/erUsernameSignout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="user name"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/etpasswordSignup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.995"
-        app:layout_constraintStart_toEndOf="@+id/etpasswordSignup"
-        app:layout_constraintTop_toBottomOf="@+id/etconfimpasswordSignup" />
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="118dp" />
 
     <EditText
         android:id="@+id/etpasswordSignup"
-        android:layout_width="215dp"
+        android:layout_width="207dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogoutSignout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/erUsernameSignout" />
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="163dp" />
 
     <EditText
         android:id="@+id/etconfimpasswordSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="101dp"
+        android:layout_width="206dp"
+        android:layout_height="41dp"
         android:ems="10"
         android:hint="confirm password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/erUsernameSignout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="206dp" />
 
     <Button
         android:id="@+id/btnLogoutSignout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#989595"
+        android:backgroundTint="#841EE9"
         android:onClick="signout"
         android:text="sign out"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="256dp" />
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="295dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
