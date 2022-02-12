@@ -3,4 +3,5 @@
     <string name="app_err_">My Application</string>
     <string name="err_fields_empty">Some fields are empty!</string>
     <string name="arb_err_fields_empty">بعض الحقول فارغة!</string>
+
 </resources>

@@ -30,7 +30,7 @@ public class AllRecActivity extends AppCompatActivity {
         readData();
 
         // set up the RecyclerView
-        RecyclerView recyclerView = findViewById(R.id.rvRestsAllRec);
+        RecyclerView recyclerView = findViewById(R.id.rvRecipesAllRec);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new AdapterRecipe(this, rests);
         recyclerView.setAdapter(adapter);

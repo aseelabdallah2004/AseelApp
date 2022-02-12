@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D8BFD8"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnLoginMain"
         android:layout_width="87dp"
         android:layout_height="50dp"
+        android:backgroundTintMode="#FFFFFF"
         android:onClick="loginn"
         android:text="log in"
+        android:textColor="#191818"
+        app:iconTint="#F6F5F5"
         tools:layout_editor_absoluteX="157dp"
         tools:layout_editor_absoluteY="222dp" />
 
@@ -25,19 +29,21 @@
 
     <Button
         android:id="@+id/btnAddRestaurant"
-        android:onClick="addRecipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="addRecipe"
         android:text="add recipe"
+        android:textColor="#171616"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="515dp" />
 
     <Button
         android:id="@+id/btnAllRestMain"
-        android:onClick="allRecipes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="allRecipes"
         android:text="All Recipes"
+        android:textColor="#131313"
         tools:layout_editor_absoluteX="224dp"
         tools:layout_editor_absoluteY="524dp" />
 
@@ -58,7 +64,7 @@
         android:ems="10"
         android:hint="password"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="175dp" />
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="177dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

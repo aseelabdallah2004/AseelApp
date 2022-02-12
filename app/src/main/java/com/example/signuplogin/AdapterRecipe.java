@@ -1,6 +1,7 @@
 package com.example.signuplogin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,24 +10,38 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder> {
 
     private List<Recipe> mData;
     private LayoutInflater mInflater;
-    private AdapterRecipe.ItemClickListener mClickListener;
+    private Context context;
+    private final AdapterRecipe.ItemClickListener mClickListener = new ItemClickListener() {
+        @Override
+        public void onItemClick(View view, int position) {
+            // get restaurant data
+            Recipe rest = mData.get(position);
+            // upload restaurant data
+            // goto details activity
+            Intent i = new Intent(context, RecDetailsActivity.class);
+            i.putExtra("rest", (Serializable)rest);
+            context.startActivity(i);
+        }
+    };
 
     // data is passed into the constructor
     AdapterRecipe(Context context, List<Recipe> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
+        this.context = context;
     }
 
     // inflates the row layout from xml when needed
     @Override
     public AdapterRecipe.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.row_recipe, parent, false);
+        View view = mInflater.inflate(R.layout.row, parent, false);
         return new AdapterRecipe.ViewHolder(view);
     }
 
@@ -69,13 +84,13 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     }
 
     // allows clicks events to be caught
-    void setClickListener(AdapterRecipe.ItemClickListener itemClickListener) {
+    /*
+    void setClickListener(AdapterRestaurant.ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
-    }
+    }*/
 
     // parent activity will implement this method to respond to click events
+
     public interface ItemClickListener {
         void onItemClick(View view, int position);
-    }
-
-}
+    }}

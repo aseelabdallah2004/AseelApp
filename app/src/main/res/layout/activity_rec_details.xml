@@ -10,7 +10,7 @@
         android:id="@+id/TvNameRecDetails"
         android:layout_width="189dp"
         android:layout_height="39dp"
-        android:text="TextView"
+        android:hint="Recipe name"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="134dp" />
 
@@ -18,7 +18,7 @@
         android:id="@+id/TvDescriptionRecDetails"
         android:layout_width="415dp"
         android:layout_height="96dp"
-        android:text="TextView"
+        android:text="Description"
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="224dp" />
 
@@ -26,7 +26,7 @@
         android:id="@+id/TvIngredientsRecDetails"
         android:layout_width="407dp"
         android:layout_height="76dp"
-        android:text="TextView"
+        android:text="Ingredients"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="327dp" />
 
@@ -34,7 +34,7 @@
         android:id="@+id/TvNutritionRecDetails"
         android:layout_width="408dp"
         android:layout_height="81dp"
-        android:text="TextView"
+        android:text="Nutrition"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="421dp" />
 
@@ -42,7 +42,7 @@
         android:id="@+id/TvDietartInfoRecDetails"
         android:layout_width="407dp"
         android:layout_height="64dp"
-        android:text="TextView"
+        android:text="TvDietartInfoRec"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="502dp" />
 
@@ -50,7 +50,7 @@
         android:id="@+id/TvStepsRecDetails"
         android:layout_width="405dp"
         android:layout_height="69dp"
-        android:text="TextView"
+        android:text="Steps"
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="580dp" />
 

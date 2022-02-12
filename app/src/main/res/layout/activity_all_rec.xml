@@ -7,7 +7,7 @@
     tools:context=".AllRecActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvRestsAllRec"
+        android:id="@+id/rvRecipesAllRec"
         android:layout_width="409dp"
         android:layout_height="729dp"
         tools:layout_editor_absoluteX="1dp"

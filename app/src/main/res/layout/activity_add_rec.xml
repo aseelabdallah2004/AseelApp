@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D8BFD8"
     tools:context=".AddRecActivity">
 
     <EditText
@@ -13,8 +14,8 @@
         android:ems="10"
         android:hint="Recipe name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="135dp" />
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="40dp" />
 
     <EditText
         android:id="@+id/etDescriptionAddRec"
@@ -31,8 +32,8 @@
         android:id="@+id/spRecipeTypeAddRecipe"
         android:layout_width="410dp"
         android:layout_height="70dp"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="178dp" />
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="163dp" />
 
     <ImageView
         android:id="@+id/ivPhotoAddRec"
@@ -44,10 +45,12 @@
 
     <Button
         android:id="@+id/btnAddAddRec"
-        android:onClick="addRecipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="addRecipe"
         android:text="add recipe"
+        android:textColor="#191717"
         tools:layout_editor_absoluteX="112dp"
         tools:layout_editor_absoluteY="484dp" />
 
@@ -68,6 +71,7 @@
         android:layout_height="44dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="Nutrition"
         android:inputType="textMultiLine"
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="440dp" />
@@ -78,6 +82,7 @@
         android:layout_height="57dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="DietartInfo"
         android:inputType="textMultiLine"
         tools:layout_editor_absoluteX="4dp"
         tools:layout_editor_absoluteY="339dp" />
@@ -88,6 +93,7 @@
         android:layout_height="44dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="Steps"
         android:inputType="textMultiLine"
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="396dp" />

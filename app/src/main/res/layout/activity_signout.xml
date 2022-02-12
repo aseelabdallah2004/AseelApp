@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D8BFD8"
     tools:context=".SignupActivity">
 
     <EditText
@@ -13,8 +14,8 @@
         android:ems="10"
         android:hint="user name"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="118dp" />
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="144dp" />
 
     <EditText
         android:id="@+id/etpasswordSignup"
@@ -24,7 +25,7 @@
         android:hint="password"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="163dp" />
+        tools:layout_editor_absoluteY="209dp" />
 
     <EditText
         android:id="@+id/etconfimpasswordSignup"
@@ -34,15 +35,16 @@
         android:hint="confirm password"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="206dp" />
+        tools:layout_editor_absoluteY="270dp" />
 
     <Button
         android:id="@+id/btnLogoutSignout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#841EE9"
+        android:backgroundTint="@color/white"
         android:onClick="signout"
         android:text="sign out"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="295dp" />
+        android:textColor="#1C1B1B"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="391dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
