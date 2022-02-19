@@ -25,6 +25,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -44,14 +45,9 @@ public class AddRecActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_rec);
-    }
-
-    protected void onCreate(Bundle savedInstanceState, View etIngredients) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_rec);
 
         getSupportActionBar().hide();
-        connectComponents(etIngredient);
+        connectComponents();
     }
 
     private void connectComponents(View etIngredients) {
@@ -89,9 +85,9 @@ public class AddRecActivity extends AppCompatActivity {
             return;
         }
 
-        Recipe rest = new  Recipe(name, description, Ingredient,Nutrition ,dietartInfo,steps,RecipeType.valueOf(category), photo);
+        Recipe rec = new  Recipe(name, description, Ingredient,Nutrition ,dietartInfo,steps,RecipeType.valueOf(category), photo);
         fbs.getFirestore().collection("restaurants")
-                .add(rest)
+                .add(rec)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
@@ -120,6 +116,8 @@ public class AddRecActivity extends AppCompatActivity {
                 if (data != null) {
                     try {
                         filePath = data.getData();
+                        Picasso.get().load(filePath).into(ivPhoto);
+                        uploadImage();
                         Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), data.getData());
                         ivPhoto.setBackground(null);
                         ivPhoto.setImageBitmap(bitmap);

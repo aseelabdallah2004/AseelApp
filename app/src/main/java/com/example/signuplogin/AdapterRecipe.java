@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -18,15 +20,16 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     private List<Recipe> mData;
     private LayoutInflater mInflater;
     private Context context;
+
     private final AdapterRecipe.ItemClickListener mClickListener = new ItemClickListener() {
         @Override
         public void onItemClick(View view, int position) {
             // get restaurant data
-            Recipe rest = mData.get(position);
+            Recipe rec = mData.get(position);
             // upload restaurant data
             // goto details activity
-            Intent i = new Intent(context, RecDetailsActivity.class);
-            i.putExtra("rest", (Serializable)rest);
+            Intent i = new Intent(context, RestDetailsActivity.class);
+            i.putExtra("rec", rec);
             context.startActivity(i);
         }
     };
@@ -41,7 +44,7 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     // inflates the row layout from xml when needed
     @Override
     public AdapterRecipe.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.row, parent, false);
+        View view = mInflater.inflate(R.layout.row_recipe, parent, false);
         return new AdapterRecipe.ViewHolder(view);
     }
 
@@ -50,7 +53,7 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     public void onBindViewHolder(AdapterRecipe.ViewHolder holder, int position) {
         Recipe rest = mData.get(position);
         holder.tvName.setText(rest.getName());
-        //holder.ivPhoto.setImageDrawable(rest.getPhoto());
+        Picasso.get().load(rest.getPhoto()).into(holder.ivPhoto);
     }
 
     // total number of rows
@@ -60,7 +63,7 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     }
 
 
-    // stores and recycles views as they are scrolled off screen
+    // stores and recycles views as they are scrol    led off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvName;
         ImageView ivPhoto;
@@ -90,7 +93,7 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     }*/
 
     // parent activity will implement this method to respond to click events
-
     public interface ItemClickListener {
         void onItemClick(View view, int position);
-    }}
+    }
+}
