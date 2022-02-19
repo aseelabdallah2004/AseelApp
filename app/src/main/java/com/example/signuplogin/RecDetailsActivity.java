@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-public class RecDetailsActivity extends AppCompatActivity {
+public class RestDetailsActivity extends AppCompatActivity {
 
-    private TextView tvName, tvDescription,TvIngredients, TvNutrition,TvDietartInfo,TvSteps ,TvCategory;
+    private TextView tvName, tvDescription, tvCategory,TvIngredients, TvNutrition,TvDietartInfo,TvSteps;
     private ImageView ivPhoto;
 
     /*
@@ -34,7 +34,7 @@ public class RecDetailsActivity extends AppCompatActivity {
         tvDescription.setText(rec.getDescription());
         TvIngredients.setText(rec.getIngredients());
         TvNutrition.setText(rec.getNutrition());
-        TvCategory.setText(rec.getCategory().toString());
+        tvCategory.setText(rec.getCategory().toString());
         TvDietartInfo.setText(rec.getDietartInfo());
         TvSteps.setText(rec.getSteps());
         Picasso.get().load(rec.getPhoto()).into(ivPhoto);
@@ -44,7 +44,7 @@ public class RecDetailsActivity extends AppCompatActivity {
         tvName = findViewById(R.id.TvNameRecDetails);
         tvDescription = findViewById(R.id.TvDescriptionRecDetails);
         TvIngredients = findViewById(R.id.TvIngredientsRecDetails);
-        TvCategory = findViewById(R.id.TvCategoryRecDetails);
+        tvCategory = findViewById(R.id.SrCategoryRecDetails);
         TvNutrition = findViewById(R.id.TvNutritionRecDetails);
         TvDietartInfo=findViewById(R.id.TvDietartInfoRecDetails);
         TvSteps=findViewById(R.id.TvStepsRecDetails);

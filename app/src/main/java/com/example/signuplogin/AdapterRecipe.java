@@ -24,11 +24,11 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     private final AdapterRecipe.ItemClickListener mClickListener = new ItemClickListener() {
         @Override
         public void onItemClick(View view, int position) {
-            // get recipe data
+            // get restaurant data
             Recipe rec = mData.get(position);
-            // upload recipe data
+            // upload restaurant data
             // goto details activity
-            Intent i = new Intent(context, RecDetailsActivity.class);
+            Intent i = new Intent(context, RestDetailsActivity.class);
             i.putExtra("rec", rec);
             context.startActivity(i);
         }
@@ -71,7 +71,7 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
         ViewHolder(View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.tvNameRecRow);
-            ivPhoto = itemView.findViewById(R.id.ivPhotoAddRec);
+            ivPhoto = itemView.findViewById(R.id.ivPhotoRecRow);
             itemView.setOnClickListener(this);
         }
 

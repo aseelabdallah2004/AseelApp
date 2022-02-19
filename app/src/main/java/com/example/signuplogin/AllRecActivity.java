@@ -17,7 +17,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllRecActivity extends AppCompatActivity {
+public class AllRestActivity extends AppCompatActivity {
+
     private RecyclerView rvAllRest;
     AdapterRecipe adapter;
     FirebaseServices fbs;
@@ -54,7 +55,7 @@ public class AllRecActivity extends AppCompatActivity {
     private void readData() {
         try {
 
-            fbs.getFirestore().collection("recipes")
+            fbs.getFirestore().collection("restaurants")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
@@ -66,7 +67,7 @@ public class AllRecActivity extends AppCompatActivity {
 
                                 myCallback.onCallback(recs);
                             } else {
-                                Log.e("AllRecActivity: readData()", "Error getting documents.", task.getException());
+                                Log.e("AllRestActivity: readData()", "Error getting documents.", task.getException());
                             }
                         }
                     });

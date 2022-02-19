@@ -32,7 +32,7 @@ import java.util.UUID;
 
 public class AddRecActivity extends AppCompatActivity {
 
-    private static final String TAG = "AddRecActivity";
+    private static final String TAG = "AddRestActivity";
     private EditText etName, etDesc, etIngredient,etNutritionAddRec,etDietartInfoAddRec, etStepsAddRec;
     private Spinner spCat;
     private ImageView ivPhoto;
@@ -50,7 +50,7 @@ public class AddRecActivity extends AppCompatActivity {
         connectComponents();
     }
 
-    private void connectComponents() {
+    private void connectComponents(View etIngredients) {
         etName = findViewById(R.id.etNameAddRec);
         etDesc = findViewById(R.id.etDescriptionAddRec);
         etDietartInfoAddRec=findViewById(R.id.etDietartInfoAddRec);
@@ -86,7 +86,7 @@ public class AddRecActivity extends AppCompatActivity {
         }
 
         Recipe rec = new  Recipe(name, description, Ingredient,Nutrition ,dietartInfo,steps,RecipeType.valueOf(category), photo);
-        fbs.getFirestore().collection("recipes")
+        fbs.getFirestore().collection("restaurants")
                 .add(rec)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
@@ -143,13 +143,11 @@ public class AddRecActivity extends AppCompatActivity {
             progressDialog.show();
 
             // Defining the child of storageReference
-            String fileNameStr = filePath.toString().substring(filePath.toString().lastIndexOf("/")+1);
             StorageReference ref
                     = storageReference
                     .child(
                             "images/"
-                                    + fileNameStr);
-            filePath.toString().substring(filePath.toString().lastIndexOf("/")+1);
+                                    + UUID.randomUUID().toString());
 
             // adding listeners on upload
             // or failure of image
