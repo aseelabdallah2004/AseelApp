@@ -24,11 +24,11 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     private final AdapterRecipe.ItemClickListener mClickListener = new ItemClickListener() {
         @Override
         public void onItemClick(View view, int position) {
-            // get restaurant data
+            // get recipe data
             Recipe rec = mData.get(position);
-            // upload restaurant data
+            // upload recipe data
             // goto details activity
-            Intent i = new Intent(context, RestDetailsActivity.class);
+            Intent i = new Intent(context, RecDetailsActivity.class);
             i.putExtra("rec", rec);
             context.startActivity(i);
         }
@@ -51,9 +51,9 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(AdapterRecipe.ViewHolder holder, int position) {
-        Recipe rest = mData.get(position);
-        holder.tvName.setText(rest.getName());
-        Picasso.get().load(rest.getPhoto()).into(holder.ivPhoto);
+        Recipe rec = mData.get(position);
+        holder.tvName.setText(rec.getName());
+        Picasso.get().load(rec.getPhoto()).into(holder.ivPhoto);
     }
 
     // total number of rows
@@ -71,7 +71,7 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
         ViewHolder(View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.tvNameRecRow);
-            ivPhoto = itemView.findViewById(R.id.ivPhotoRecRow);
+            ivPhoto = itemView.findViewById(R.id.ivPhotoAddRec);
             itemView.setOnClickListener(this);
         }
 

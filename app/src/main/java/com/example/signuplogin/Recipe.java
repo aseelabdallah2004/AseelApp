@@ -1,7 +1,9 @@
 package com.example.signuplogin;
 
 
-    public class Recipe {
+import java.io.Serializable;
+
+public class Recipe  implements Serializable {
         private String name;
         private String description;
         private String ingredients;

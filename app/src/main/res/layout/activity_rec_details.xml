@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/TvNameRecDetails"
-        android:layout_width="189dp"
-        android:layout_height="39dp"
+        android:layout_width="414dp"
+        android:layout_height="48dp"
         android:hint="Recipe name"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="134dp" />
@@ -62,10 +62,12 @@
         tools:layout_editor_absoluteY="0dp"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <Spinner
-        android:id="@+id/SrCategoryRecDetails"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="190dp" />
+    <TextView
+        android:id="@+id/TvCategoryRecDetails"
+        android:layout_width="403dp"
+        android:layout_height="34dp"
+        android:text="Category"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="187dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

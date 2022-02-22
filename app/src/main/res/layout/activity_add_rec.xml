@@ -15,7 +15,7 @@
         android:hint="Recipe name"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="40dp" />
+        tools:layout_editor_absoluteY="54dp" />
 
     <EditText
         android:id="@+id/etDescriptionAddRec"
@@ -25,15 +25,15 @@
         android:gravity="start|top"
         android:hint="Recipe description..."
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="249dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="275dp" />
 
     <Spinner
         android:id="@+id/spRecipeTypeAddRecipe"
         android:layout_width="410dp"
         android:layout_height="70dp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="163dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="205dp" />
 
     <ImageView
         android:id="@+id/ivPhotoAddRec"
@@ -51,8 +51,8 @@
         android:onClick="addRecipe"
         android:text="add recipe"
         android:textColor="#191717"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="484dp" />
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="541dp" />
 
     <EditText
         android:id="@+id/etIngredientAddRec"
@@ -63,7 +63,7 @@
         android:hint="Ingredients"
         android:inputType="textMultiLine"
         tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="294dp" />
+        tools:layout_editor_absoluteY="319dp" />
 
     <EditText
         android:id="@+id/etNutritionAddRec"
@@ -73,8 +73,8 @@
         android:gravity="start|top"
         android:hint="Nutrition"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="440dp" />
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="472dp" />
 
     <EditText
         android:id="@+id/etDietartInfoAddRec"
@@ -84,8 +84,8 @@
         android:gravity="start|top"
         android:hint="DietartInfo"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="339dp" />
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="371dp" />
 
     <EditText
         android:id="@+id/etStepsAddRec"
@@ -95,6 +95,6 @@
         android:gravity="start|top"
         android:hint="Steps"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="396dp" />
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="428dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -85,19 +86,14 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // TODO: commands if successful
+                            Intent i = new Intent(SignupActivity.this, AllRecActivity.class);
+                            startActivity(i);
                         } else {
-
-
-                            Toast.makeText(SignupActivity.this, "Username or password is empty!", Toast.LENGTH_SHORT).show();
-                            return;
+                            // TODO: what to do if fails
                         }
-
-
                     }
                 });
 
 
     }
-
 }

@@ -32,7 +32,7 @@ import java.util.UUID;
 
 public class AddRecActivity extends AppCompatActivity {
 
-    private static final String TAG = "AddRestActivity";
+    private static final String TAG = "AddRecActivity";
     private EditText etName, etDesc, etIngredient,etNutritionAddRec,etDietartInfoAddRec, etStepsAddRec;
     private Spinner spCat;
     private ImageView ivPhoto;
@@ -50,7 +50,7 @@ public class AddRecActivity extends AppCompatActivity {
         connectComponents();
     }
 
-    private void connectComponents(View etIngredients) {
+    private void connectComponents() {
         etName = findViewById(R.id.etNameAddRec);
         etDesc = findViewById(R.id.etDescriptionAddRec);
         etDietartInfoAddRec=findViewById(R.id.etDietartInfoAddRec);
@@ -86,7 +86,7 @@ public class AddRecActivity extends AppCompatActivity {
         }
 
         Recipe rec = new  Recipe(name, description, Ingredient,Nutrition ,dietartInfo,steps,RecipeType.valueOf(category), photo);
-        fbs.getFirestore().collection("restaurants")
+        fbs.getFirestore().collection("recipes")
                 .add(rec)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
