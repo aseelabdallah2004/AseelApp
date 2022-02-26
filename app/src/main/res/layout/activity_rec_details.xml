@@ -11,63 +11,94 @@
         android:layout_width="414dp"
         android:layout_height="48dp"
         android:hint="Recipe name"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="134dp" />
+        app:layout_constraintBottom_toTopOf="@+id/TvCategoryRecDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IvPhotoRecDetails" />
 
     <TextView
         android:id="@+id/TvDescriptionRecDetails"
         android:layout_width="415dp"
         android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
         android:text="Description"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="224dp" />
+        app:layout_constraintBottom_toTopOf="@+id/TvIngredientsRecDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvCategoryRecDetails" />
 
     <TextView
         android:id="@+id/TvIngredientsRecDetails"
         android:layout_width="407dp"
         android:layout_height="76dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="14dp"
         android:text="Ingredients"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="327dp" />
+        app:layout_constraintBottom_toTopOf="@+id/TvNutritionRecDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvDescriptionRecDetails" />
 
     <TextView
         android:id="@+id/TvNutritionRecDetails"
         android:layout_width="408dp"
         android:layout_height="81dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="2dp"
         android:text="Nutrition"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="421dp" />
+        app:layout_constraintBottom_toTopOf="@+id/TvDietartInfoRecDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvIngredientsRecDetails" />
 
     <TextView
         android:id="@+id/TvDietartInfoRecDetails"
         android:layout_width="407dp"
         android:layout_height="64dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="14dp"
         android:text="TvDietartInfoRec"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="502dp" />
+        app:layout_constraintBottom_toTopOf="@+id/TvStepsRecDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TvNutritionRecDetails"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TvStepsRecDetails"
         android:layout_width="405dp"
         android:layout_height="69dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="8dp"
         android:text="Steps"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="580dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvNutritionRecDetails" />
 
     <ImageView
         android:id="@+id/IvPhotoRecDetails"
         android:layout_width="411dp"
         android:layout_height="134dp"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/TvNameRecDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/TvCategoryRecDetails"
         android:layout_width="403dp"
         android:layout_height="34dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Category"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="182dp" />
+        app:layout_constraintBottom_toTopOf="@+id/TvDescriptionRecDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvNameRecDetails" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
