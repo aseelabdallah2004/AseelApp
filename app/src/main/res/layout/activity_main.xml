@@ -18,7 +18,7 @@
         android:textColor="#FFFFFF"
         app:iconTint="#F6F5F5"
         tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="222dp" />
+        tools:layout_editor_absoluteY="270dp" />
 
     <TextView
         android:id="@+id/tvSignupLinkMain"
@@ -26,7 +26,7 @@
         android:layout_height="43dp"
         android:text="register..."
         tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="272dp" />
+        tools:layout_editor_absoluteY="320dp" />
 
     <Button
         android:id="@+id/btnAddRestaurant"
@@ -59,7 +59,7 @@
         android:hint="Name"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="124dp" />
+        tools:layout_editor_absoluteY="165dp" />
 
     <EditText
         android:id="@+id/etPasswordMain"
@@ -69,6 +69,6 @@
         android:hint="password"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="177dp" />
+        tools:layout_editor_absoluteY="210dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

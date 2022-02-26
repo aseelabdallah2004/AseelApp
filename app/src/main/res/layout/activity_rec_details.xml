@@ -67,7 +67,7 @@
         android:layout_width="403dp"
         android:layout_height="34dp"
         android:text="Category"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="187dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="182dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
