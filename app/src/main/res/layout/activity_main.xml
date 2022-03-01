@@ -14,7 +14,7 @@
         android:layout_marginTop="153dp"
         android:layout_marginBottom="152dp"
         android:backgroundTint="#776F77"
-        android:onClick="loginn"
+        android:onClick="login"
         android:text="log in"
         android:textColor="#FFFFFF"
         app:iconTint="#F6F5F5"
