@@ -9,38 +9,56 @@
 
     <EditText
         android:id="@+id/etNameAddRec"
-        android:layout_width="134dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="78dp"
         android:ems="10"
         android:hint="Recipe name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="54dp" />
+        app:layout_constraintBottom_toTopOf="@+id/etDescriptionAddRec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPhotoAddRec"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etDescriptionAddRec"
-        android:layout_width="406dp"
-        android:layout_height="44dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="249dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Recipe description..."
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="275dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNameAddRec" />
 
     <Spinner
         android:id="@+id/spRecipeTypeAddRecipe"
-        android:layout_width="410dp"
-        android:layout_height="70dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="205dp" />
+        android:layout_width="0dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etDescriptionAddRec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etNameAddRec" />
 
     <ImageView
         android:id="@+id/ivPhotoAddRec"
-        android:layout_width="135dp"
-        android:layout_height="133dp"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="-7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toTopOf="@+id/etDescriptionAddRec"
+        app:layout_constraintEnd_toStartOf="@+id/etNameAddRec"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
@@ -51,50 +69,63 @@
         android:onClick="addRecipe"
         android:text="add recipe"
         android:textColor="#191717"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="541dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNutritionAddRec" />
 
     <EditText
         android:id="@+id/etIngredientAddRec"
-        android:layout_width="406dp"
-        android:layout_height="52dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Ingredients"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="319dp" />
+        app:layout_constraintBottom_toTopOf="@+id/etDietartInfoAddRec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescriptionAddRec" />
 
     <EditText
         android:id="@+id/etNutritionAddRec"
-        android:layout_width="415dp"
-        android:layout_height="44dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Nutrition"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="472dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnAddAddRec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStepsAddRec" />
 
     <EditText
         android:id="@+id/etDietartInfoAddRec"
-        android:layout_width="407dp"
-        android:layout_height="57dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="DietartInfo"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="371dp" />
+        app:layout_constraintBottom_toTopOf="@+id/etStepsAddRec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIngredientAddRec" />
 
     <EditText
         android:id="@+id/etStepsAddRec"
-        android:layout_width="412dp"
-        android:layout_height="44dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Steps"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="428dp" />
+        app:layout_constraintBottom_toTopOf="@+id/etNutritionAddRec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDietartInfoAddRec" />
 </androidx.constraintlayout.widget.ConstraintLayout>

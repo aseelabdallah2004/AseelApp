@@ -8,8 +8,11 @@
 
     <TextView
         android:id="@+id/TvNameRecDetails"
-        android:layout_width="414dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="38dp"
         android:hint="Recipe name"
         app:layout_constraintBottom_toTopOf="@+id/TvCategoryRecDetails"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,71 +21,64 @@
 
     <TextView
         android:id="@+id/TvDescriptionRecDetails"
-        android:layout_width="415dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="Description"
-        app:layout_constraintBottom_toTopOf="@+id/TvIngredientsRecDetails"
+        app:layout_constraintBottom_toTopOf="@+id/TvDietartInfoRecDetails"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TvCategoryRecDetails" />
 
     <TextView
         android:id="@+id/TvIngredientsRecDetails"
-        android:layout_width="407dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="14dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="Ingredients"
-        app:layout_constraintBottom_toTopOf="@+id/TvNutritionRecDetails"
+        app:layout_constraintBottom_toTopOf="@+id/TvStepsRecDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvDietartInfoRecDetails" />
+
+    <TextView
+        android:id="@+id/TvNutritionRecDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="67dp"
+        android:text="Nutrition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvStepsRecDetails" />
+
+    <TextView
+        android:id="@+id/TvDietartInfoRecDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TvDietartInfoRec"
+        app:layout_constraintBottom_toTopOf="@+id/TvIngredientsRecDetails"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TvDescriptionRecDetails" />
 
     <TextView
-        android:id="@+id/TvNutritionRecDetails"
-        android:layout_width="408dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="2dp"
-        android:text="Nutrition"
-        app:layout_constraintBottom_toTopOf="@+id/TvDietartInfoRecDetails"
+        android:id="@+id/TvStepsRecDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:text="Steps"
+        app:layout_constraintBottom_toTopOf="@+id/TvNutritionRecDetails"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TvIngredientsRecDetails" />
 
-    <TextView
-        android:id="@+id/TvDietartInfoRecDetails"
-        android:layout_width="407dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="14dp"
-        android:text="TvDietartInfoRec"
-        app:layout_constraintBottom_toTopOf="@+id/TvStepsRecDetails"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TvNutritionRecDetails"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/TvStepsRecDetails"
-        android:layout_width="405dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="195dp"
-        android:layout_marginEnd="8dp"
-        android:text="Steps"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TvNutritionRecDetails" />
-
     <ImageView
         android:id="@+id/IvPhotoRecDetails"
-        android:layout_width="411dp"
-        android:layout_height="134dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="34dp"
         app:layout_constraintBottom_toTopOf="@+id/TvNameRecDetails"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,10 +87,9 @@
 
     <TextView
         android:id="@+id/TvCategoryRecDetails"
-        android:layout_width="403dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
         android:text="Category"
         app:layout_constraintBottom_toTopOf="@+id/TvDescriptionRecDetails"
         app:layout_constraintEnd_toEndOf="parent"
