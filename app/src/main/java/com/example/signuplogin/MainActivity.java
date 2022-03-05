@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // TODO: check email and password from Utilities
-        if (!utils.verifyEmail(this, username) || !utils.CheckPassword(this, password)) {
+        /*if (!utils.verifyEmail(this, username) || !utils.CheckPassword(this, password)) {
             Toast.makeText(this, "Username or password is incorrect!", Toast.LENGTH_SHORT).show();
             return;
-        }
+        }*/
 
         // TODO: 3- Check username and password with Firebase Authentication
         fbs.getAuth().signInWithEmailAndPassword(username, password)
