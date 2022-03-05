@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -40,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // TODO: check email and password from Utilities
-        if (!utils.verifyEmail(this, username) || !utils.CheckPassword(this, password))
-        {
+        if (!utils.verifyEmail(this, username) || !utils.CheckPassword(this, password)) {
             Toast.makeText(this, "Username or password is incorrect!", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -52,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // TODO: commands if successful
+                            Intent i = new Intent(MainActivity.this, AllRecActivity.class);
+                            startActivity(i);
+
                         } else {
 
 
@@ -64,6 +66,21 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-
     }
-        }
+    public void gotoSignup(View view) {
+        Intent i = new Intent(this, SignupActivity.class);
+        startActivity(i);
+    }
+
+    public void gotoAddRec(View view) {
+        Intent i = new Intent(this, AddRecActivity.class);
+        startActivity(i);
+    }
+
+    public void gotoAllRecs(View view) {
+        Intent i = new Intent(this, AllRecActivity.class);
+        startActivity(i);
+    }
+}
+
+

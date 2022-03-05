@@ -7,79 +7,54 @@
     android:background="#D8BFD8"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnLoginMain"
-        android:layout_width="87dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="153dp"
-        android:layout_marginBottom="152dp"
-        android:backgroundTint="#776F77"
-        android:onClick="login"
-        android:text="log in"
-        android:textColor="#FFFFFF"
-        app:iconTint="#F6F5F5"
-        app:layout_constraintBottom_toTopOf="@+id/btnAllRestMain"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etUsernameMain" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvSignupLinkMain"
-        android:layout_width="148dp"
-        android:layout_height="36dp"
-        android:layout_marginBottom="36dp"
-        android:text="register..."
-        app:layout_constraintBottom_toTopOf="@+id/btnAllRestMain"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/etUsernameMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textEmailAddress" />
 
-    <Button
-        android:id="@+id/btnAddRestaurant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="22dp"
-        android:backgroundTint="#776F77"
-        android:onClick="addRecipe"
-        android:text="add recipe"
-        app:iconTint="#F6F6F6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/etPasswordMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/btnAllRestMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="22dp"
-        android:backgroundTint="#776F77"
-        android:onClick="allRecipes"
-        android:text="All Recipes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/bnLoginMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Login"
+            android:text="Login" />
 
-    <EditText
-        android:id="@+id/etUsernameMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvSignupLinkMain"
+            android:layout_width="121dp"
+            android:layout_height="35dp"
+            android:onClick="gotoSignup"
+            android:text="register..." />
 
-    <EditText
-        android:id="@+id/etPasswordMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:ems="10"
-        android:hint="password"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btnLoginMain"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btnAddRecipe"
+            android:onClick="gotoAddRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Recipe" />
+
+        <Button
+            android:id="@+id/btnAllRecMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="gotoAllRecs"
+            android:text="All Recipes" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

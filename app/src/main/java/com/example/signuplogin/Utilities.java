@@ -24,6 +24,8 @@ public class Utilities {
     }
 
     public boolean verifyEmail(AppCompatActivity activity, String email) {
+        return true;
+        /*
         int count1 = 0;
         String[] splitstring = email.split("@");
         if (splitstring.length != 2) {
@@ -67,6 +69,8 @@ public class Utilities {
             }
         }
         return false;
+
+         */
     }
 
     public boolean CheckPassword(AppCompatActivity activity, String password) {
