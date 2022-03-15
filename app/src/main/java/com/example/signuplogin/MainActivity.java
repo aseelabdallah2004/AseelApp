@@ -41,10 +41,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // TODO: check email and password from Utilities
-        /*if (!utils.verifyEmail(this, username) || !utils.CheckPassword(this, password)) {
+        if (!utils.verifyEmail(this, username) || !utils.CheckPassword(this, password))
+        {
             Toast.makeText(this, "Username or password is incorrect!", Toast.LENGTH_SHORT).show();
             return;
-        }*/
+        }
 
         // TODO: 3- Check username and password with Firebase Authentication
         fbs.getAuth().signInWithEmailAndPassword(username, password)
@@ -52,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent i = new Intent(MainActivity.this, AllRecActivity.class);
-                            startActivity(i);
-
+                            // TODO: commands if successful
                         } else {
 
 
@@ -66,21 +65,20 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+
     }
     public void gotoSignup(View view) {
         Intent i = new Intent(this, SignupActivity.class);
         startActivity(i);
     }
 
-    public void gotoAddRec(View view) {
+    public void gotoAddRest(View view) {
         Intent i = new Intent(this, AddRecActivity.class);
         startActivity(i);
     }
 
-    public void gotoAllRecs(View view) {
+    public void gotoAllRests(View view) {
         Intent i = new Intent(this, AllRecActivity.class);
         startActivity(i);
     }
 }
-
-
