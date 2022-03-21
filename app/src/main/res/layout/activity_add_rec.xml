@@ -52,6 +52,7 @@
     <ImageView
         android:id="@+id/ivPhotoAddRec"
         android:layout_width="135dp"
+        android:onClick="selectPhoto"
         android:layout_height="133dp"
         tools:layout_editor_absoluteX="-4dp"
         tools:layout_editor_absoluteY="-7dp"
@@ -66,7 +67,7 @@
         android:layout_marginEnd="172dp"
         android:layout_marginBottom="142dp"
         android:backgroundTint="#FFFFFF"
-        android:onClick="addRecipe"
+        android:onClick="add"
         android:text="add recipe"
         android:textColor="#191717"
         app:layout_constraintBottom_toBottomOf="parent"

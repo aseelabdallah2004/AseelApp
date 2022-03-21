@@ -50,13 +50,13 @@
         android:ems="10"
         android:hint="confirm password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogoutSignout"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogoutSignup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etpasswordSignup" />
 
     <Button
-        android:id="@+id/btnLogoutSignout"
+        android:id="@+id/btnLogoutSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="126dp"
@@ -64,8 +64,8 @@
         android:layout_marginEnd="181dp"
         android:layout_marginBottom="292dp"
         android:backgroundTint="@color/white"
-        android:onClick="signout"
-        android:text="sign out"
+        android:onClick="signup"
+        android:text="sign up"
         android:textColor="#1C1B1B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

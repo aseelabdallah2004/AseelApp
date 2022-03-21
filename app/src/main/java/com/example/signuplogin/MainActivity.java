@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+        connectComponents();
+    }
+    private void connectComponents() {
         etUsername=findViewById(R.id.etUsernameMain);
         etPassword=findViewById(R.id.etPasswordMain);
         fbs=FirebaseServices.getInstance();
@@ -72,12 +76,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void gotoAddRest(View view) {
+    public void gotoAddRec(View view) {
         Intent i = new Intent(this, AddRecActivity.class);
         startActivity(i);
     }
 
-    public void gotoAllRests(View view) {
+    public void gotoAllRecs(View view) {
         Intent i = new Intent(this, AllRecActivity.class);
         startActivity(i);
     }
