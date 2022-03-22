@@ -148,7 +148,10 @@ public class AddRecActivity extends AppCompatActivity {
                     = storageReference
                     .child(
                             "images/"
-                                    + fileNameStr);
+                                    + filePath.getLastPathSegment());
+            //+ fileNameStr);
+
+            //downloadableURL = ref.getDownloadUrl().toString();
             filePath.toString().substring(filePath.toString().lastIndexOf("/")+1);
 
             // adding listeners on upload
