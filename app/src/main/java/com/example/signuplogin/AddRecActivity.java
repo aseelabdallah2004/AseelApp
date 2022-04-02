@@ -41,9 +41,8 @@ public class AddRecActivity extends AppCompatActivity {
     private ImageView ivPhoto;
     private FirebaseServices fbs;
     private Uri filePath;
-    private Button btnAddAddRec;
     StorageReference storageReference;
-
+    private String downloadableURL = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +60,6 @@ public class AddRecActivity extends AppCompatActivity {
         etIngredient = findViewById(R.id.etIngredientAddRec);
         etNutritionAddRec = findViewById(R.id.etNutritionAddRec);
         spCat = findViewById(R.id.spRecipeTypeAddRecipe);
-        btnAddAddRec = findViewById(R.id.btnAddAddRec);
         ivPhoto = findViewById(R.id.ivPhotoAddRec);
         fbs = FirebaseServices.getInstance();
         spCat.setAdapter(new ArrayAdapter<RecipeType>(this, android.R.layout.simple_list_item_1, RecipeType.values()));
@@ -80,10 +78,10 @@ public class AddRecActivity extends AppCompatActivity {
         category = spCat.getSelectedItem().toString();
         if (ivPhoto.getDrawable() == null)
             photo = "no_image";
-        else photo = storageReference.getDownloadUrl().toString();
+        else photo = downloadableURL;
 
-        if (name.trim().isEmpty() || description.trim().isEmpty() || Nutrition.trim().isEmpty() ||
-                Ingredient.trim().isEmpty() || category.trim().isEmpty() || photo.trim().isEmpty()) {
+        if (name.trim().isEmpty() || description.trim().isEmpty() || Nutrition.trim().isEmpty() ||dietartInfo.trim().isEmpty()||steps.trim().isEmpty()||
+                Ingredient.trim().isEmpty() || category.trim().isEmpty() || photo.equals("no image")) {
             Toast.makeText(this, R.string.err_fields_empty, Toast.LENGTH_SHORT).show();
             return;
         }
@@ -321,4 +319,4 @@ public class AddRecActivity extends AppCompatActivity {
         }
     }*/
 
-    }
+}
