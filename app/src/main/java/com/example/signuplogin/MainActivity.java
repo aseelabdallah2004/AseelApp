@@ -24,53 +24,48 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+
         connectComponents();
     }
-    private void connectComponents() {
-        etUsername=findViewById(R.id.etUsernameMain);
-        etPassword=findViewById(R.id.etPasswordMain);
-        fbs=FirebaseServices.getInstance();
-        utils = Utilities.getInstance();
-    }
 
-    public void Login(View view) {
+    private void connectComponents() {
+        etUsername = findViewById(R.id.etUsernameMain);
+        etPassword = findViewById(R.id.etPasswordMain);
+        utils = Utilities.getInstance();
+        fbs = FirebaseServices.getInstance();
+
+    }
+    public void login(View view) {
         String username = etUsername.getText().toString();
         String password = etPassword.getText().toString();
-        // TODO: 2- Data validation
-        if (username.trim().isEmpty() || password.trim().isEmpty()) {
-            Toast.makeText(this, "Username or password is missing!", Toast.LENGTH_SHORT).show();
-            return;
 
-        }
-
-        // TODO: check email and password from Utilities
-        if (!utils.verifyEmail(this, username) || !utils.CheckPassword(this, password))
+        if (username.trim().isEmpty() || password.trim().isEmpty())
         {
-            Toast.makeText(this, "Username or password is incorrect!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.err_fields_empty, Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // TODO: 3- Check username and password with Firebase Authentication
+        if (!utils.verifyEmail(this,username) || !utils.CheckPassword(this,password))
+        {
+            Toast.makeText(this, R.string.err_incorrect_user_password, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         fbs.getAuth().signInWithEmailAndPassword(username, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // TODO: commands if successful
+                            Intent i = new Intent(MainActivity.this, AllRecActivity.class);
+                            startActivity(i);
+
                         } else {
-
-
-                            Toast.makeText(MainActivity.this, "Username or password is empty!", Toast.LENGTH_SHORT).show();
-                            return;
+                            Toast.makeText(MainActivity.this, R.string.err_incorrect_user_password, Toast.LENGTH_SHORT).show();
                         }
-
-
                     }
                 });
-
-
     }
+
     public void gotoSignup(View view) {
         Intent i = new Intent(this, SignupActivity.class);
         startActivity(i);
@@ -86,3 +81,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 }
+

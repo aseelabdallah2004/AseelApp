@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class SignupActivity extends AppCompatActivity {
     private EditText etUsername, etPassword;
@@ -23,12 +22,16 @@ public class SignupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        etUsername = findViewById(R.id.erUsernameSignout);
-        etPassword = findViewById(R.id.etpasswordSignup);
-        fbs = FirebaseServices.getInstance();
-        utils = Utilities.getInstance();
+
+        connectComponents();
     }
 
+    private void connectComponents() {
+        etUsername = findViewById(R.id.erUsernameSignup);
+        etPassword = findViewById(R.id.etpasswordSignup);
+        utils = Utilities.getInstance();
+        fbs = FirebaseServices.getInstance();
+    }
     public void signup(View view) {
 
         String username = etUsername.getText().toString();
@@ -40,7 +43,7 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        if (!utils.verifyEmail(this,username) || !utils.CheckPassword(this,password))
+        if (!utils.verifyEmail(this, username) || !utils.CheckPassword(this,password))
         {
             Toast.makeText(this, "Incorrect email or password!", Toast.LENGTH_SHORT).show();
             return;
