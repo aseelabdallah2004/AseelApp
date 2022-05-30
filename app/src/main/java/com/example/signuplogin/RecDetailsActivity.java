@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-public class RestDetailsActivity extends AppCompatActivity {
+public class RecDetailsActivity extends AppCompatActivity {
 
     private TextView tvName, tvDescription, tvCategory,TvIngredients, TvNutrition,TvDietartInfo,TvSteps;
     private ImageView ivPhoto;
@@ -44,7 +44,7 @@ public class RestDetailsActivity extends AppCompatActivity {
         tvName = findViewById(R.id.TvNameRecDetails);
         tvDescription = findViewById(R.id.TvDescriptionRecDetails);
         TvIngredients = findViewById(R.id.TvIngredientsRecDetails);
-        tvCategory = findViewById(R.id.SrCategoryRecDetails);
+        tvCategory = findViewById(R.id.TvCategoryRecDetails);
         TvNutrition = findViewById(R.id.TvNutritionRecDetails);
         TvDietartInfo=findViewById(R.id.TvDietartInfoRecDetails);
         TvSteps=findViewById(R.id.TvStepsRecDetails);

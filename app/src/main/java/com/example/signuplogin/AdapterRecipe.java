@@ -28,7 +28,7 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
             Recipe rec = mData.get(position);
             // upload restaurant data
             // goto details activity
-            Intent i = new Intent(context, RestDetailsActivity.class);
+            Intent i = new Intent(context, RecDetailsActivity.class);
             i.putExtra("rec", rec);
             context.startActivity(i);
         }

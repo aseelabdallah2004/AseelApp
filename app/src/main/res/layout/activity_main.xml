@@ -4,57 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D8BFD8"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <EditText
+        android:id="@+id/etPasswordMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="356dp" />
 
-        <EditText
-            android:id="@+id/etUsernameMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Username"
-            android:inputType="textEmailAddress" />
+    <Button
+        android:id="@+id/bnLoginMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8591072E"
+        android:onClick="login"
+        android:text="Login"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="418dp" />
 
-        <EditText
-            android:id="@+id/etPasswordMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/tvSignupLinkMain"
+        android:layout_width="121dp"
+        android:layout_height="35dp"
+        android:onClick="gotoSignup"
+        android:text="register..."
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="488dp" />
 
-        <Button
-            android:id="@+id/bnLoginMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="login"
-            android:text="Login" />
+    <Button
+        android:id="@+id/btnAddRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8591072E"
+        android:onClick="gotoAddRec"
+        android:text="Add Recipe"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="576dp" />
 
-        <TextView
-            android:id="@+id/tvSignupLinkMain"
-            android:layout_width="121dp"
-            android:layout_height="35dp"
-            android:onClick="gotoSignup"
-            android:text="register..." />
+    <Button
+        android:id="@+id/btnAllRecMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8591072E"
+        android:onClick="gotoAllRecs"
+        android:text="All Recipes"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="569dp" />
 
-        <Button
-            android:id="@+id/btnAddRecipe"
-            android:onClick="gotoAddRec"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Recipe" />
-
-        <Button
-            android:id="@+id/btnAllRecMain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="gotoAllRecs"
-            android:text="All Recipes" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/etUsernameMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="294dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

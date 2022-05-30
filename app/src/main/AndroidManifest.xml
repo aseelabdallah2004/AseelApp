@@ -9,19 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SignupLogin">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/intro" />
+
         <activity
-            android:name=".RecDetailsActivity"
+            android:name=".AllRecipesActivity"
             android:exported="true" />
         <activity
             android:name=".AllRecActivity"
             android:exported="true" />
         <activity
+            android:name=".RecDetailsActivity"
+            android:exported="true" />
+        <activity
             android:name=".AddRecActivity"
             android:exported="true" />
-
         <activity
             android:name=".SignupActivity"
-            android:exported="true"> </activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -54,7 +54,7 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent i = new Intent(SignupActivity.this, AllRecActivity.class);
+                            Intent i = new Intent(SignupActivity.this, AllRecipesActivity.class);
                             startActivity(i);
                         } else {
                             Toast.makeText(SignupActivity.this, R.string.err_firebase_general, Toast.LENGTH_SHORT).show();
