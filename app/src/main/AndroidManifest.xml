@@ -9,15 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SignupLogin">
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/intro" />
 
         <activity
             android:name=".AllRecipesActivity"
-            android:exported="true" />
-        <activity
-            android:name=".AllRecActivity"
             android:exported="true" />
         <activity
             android:name=".RecDetailsActivity"

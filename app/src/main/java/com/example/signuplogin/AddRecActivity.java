@@ -115,16 +115,16 @@ public class AddRecActivity extends AppCompatActivity {
         if (requestCode == 40) {
             if (resultCode == Activity.RESULT_OK) {
                 if (data != null) {
-                    try {
+                    //try {
                         filePath = data.getData();
                         Picasso.get().load(filePath).into(ivPhoto);
-                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), data.getData());
+                        /*Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), data.getData());
                         ivPhoto.setBackground(null);
-                        ivPhoto.setImageBitmap(bitmap);
+                        ivPhoto.setImageBitmap(bitmap);*/
                         uploadImage2();
-                    } catch (IOException e) {
+                    /*} catch (IOException e) {
                         e.printStackTrace();
-                    }
+                    }*/
                 }
             } else if (resultCode == Activity.RESULT_CANCELED) {
                 Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show();
