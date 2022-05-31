@@ -3,7 +3,7 @@ package com.example.signuplogin;
 
 import java.io.Serializable;
 
-public class Recipe  implements Serializable {
+public class Recipe implements Serializable {
         private String name;
         private String description;
         private String ingredients;
