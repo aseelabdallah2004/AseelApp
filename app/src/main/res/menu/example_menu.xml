@@ -4,9 +4,9 @@
 <item android:id="@+id/Item1"
       android:title="sign up"
       android:onClick="signup"
-      app:showAsAction="never"
+      app:showAsAction="never"/>
     <item android:id="@+id/Item2"
         android:title="Item2"
         android:icon="@drawable/ic_baseline_search_24"
-        app:showAsAction="ifRoom"
+        app:showAsAction="ifRoom"/>
 </menu>
