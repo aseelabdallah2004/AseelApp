@@ -24,9 +24,9 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
     private final AdapterRecipe.ItemClickListener mClickListener = new ItemClickListener() {
         @Override
         public void onItemClick(View view, int position) {
-            // get restaurant data
+            // get recipe data
             Recipe rec = mData.get(position);
-            // upload restaurant data
+            // upload recipe data
             // goto details activity
             Intent i = new Intent(context, RecDetailsActivity.class);
             i.putExtra("rec", rec);

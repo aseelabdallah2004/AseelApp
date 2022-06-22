@@ -42,8 +42,8 @@
         android:backgroundTint="#8591072E"
         android:onClick="gotoAddRec"
         android:text="Add Recipe"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="576dp" />
+        tools:layout_editor_absoluteX="263dp"
+        tools:layout_editor_absoluteY="636dp" />
 
     <Button
         android:id="@+id/btnAllRecMain"
@@ -52,8 +52,8 @@
         android:backgroundTint="#8591072E"
         android:onClick="gotoAllRecs"
         android:text="All Recipes"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="569dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="636dp" />
 
     <EditText
         android:id="@+id/etUsernameMain"
