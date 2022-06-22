@@ -13,8 +13,8 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="356dp" />
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="434dp" />
 
     <Button
         android:id="@+id/bnLoginMain"
@@ -23,8 +23,8 @@
         android:backgroundTint="#8591072E"
         android:onClick="login"
         android:text="Login"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="418dp" />
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="516dp" />
 
     <TextView
         android:id="@+id/tvSignupLinkMain"
@@ -33,7 +33,7 @@
         android:onClick="gotoSignup"
         android:text="register..."
         tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="488dp" />
+        tools:layout_editor_absoluteY="572dp" />
 
     <Button
         android:id="@+id/btnAddRecipe"
@@ -62,7 +62,15 @@
         android:ems="10"
         android:hint="Username"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="294dp" />
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="427dp"
+        android:layout_height="637dp"
+        app:srcCompat="@drawable/mainActivity"
+        tools:layout_editor_absoluteX="-18dp"
+        tools:layout_editor_absoluteY="-174dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,7 @@
 package com.example.signuplogin;
 
+import static com.google.common.reflect.Reflection.initialize;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,13 +31,11 @@ import java.util.List;
         ArrayList<Recipe> recs;
         MyCallback myCallback;
 
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_all_recipes);
-
-            Toolbar toolbar = findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
 
 
             fbs = FirebaseServices.getInstance();

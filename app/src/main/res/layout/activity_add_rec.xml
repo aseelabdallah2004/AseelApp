@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D8BFD8"
     tools:context=".AddRecActivity">
 
     <EditText
@@ -19,8 +18,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/spRecipeTypeAddRecipe"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivPhotoAddRec"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/etDescriptionAddRec"
@@ -65,12 +66,13 @@
         android:layout_marginTop="9dp"
         android:layout_marginEnd="172dp"
         android:layout_marginBottom="142dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="@color/pink"
         android:onClick="addRecipe"
         android:text="add recipe"
-        android:textColor="#191717"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNutritionAddRec" />
 
