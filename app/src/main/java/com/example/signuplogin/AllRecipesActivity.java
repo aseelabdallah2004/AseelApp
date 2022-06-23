@@ -29,7 +29,7 @@ import java.util.List;
 
     public class AllRecipesActivity extends AppCompatActivity {
 
-        private RecyclerView rvAllRec;
+        private RecyclerView rvRecsAllRec;
         AdapterRecipe adapter;
         FirebaseServices fbs;
         ArrayList<Recipe> recs;
@@ -48,17 +48,13 @@ import java.util.List;
             myCallback = new MyCallback() {
                 @Override
                 public void onCallback(List<Recipe> recipeList) {
-                    RecyclerView recyclerView = findViewById(R.id.rvRecipesAllRec);
+                    RecyclerView recyclerView = findViewById(R.id.rvRecsAllRec);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                     adapter = new AdapterRecipe(getApplicationContext(), recs);
                     recyclerView.setAdapter(adapter);
                 }
             };
-            ActionBar actionBar = getSupportActionBar();
 
-            actionBar.setTitle("A cup of yum");
-            actionBar.setDisplayUseLogoEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
         }
 
         @Override
