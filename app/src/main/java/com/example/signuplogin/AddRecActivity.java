@@ -48,7 +48,7 @@ public class AddRecActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_rec);
 
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         connectComponents();
     }
 
