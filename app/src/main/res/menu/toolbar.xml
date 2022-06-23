@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<item android:id="@+id/Item1"
+<item android:id="@+id/miSignup"
       android:title="sign up"
       android:onClick="signup"
       app:showAsAction="never"/>
@@ -9,4 +9,6 @@
         android:title="Item2"
         android:icon="@drawable/ic_baseline_search_24"
         app:showAsAction="ifRoom"/>
+    <item android:id="@+id/miAddRecipe"
+        android:title="add recipe"/>
 </menu>

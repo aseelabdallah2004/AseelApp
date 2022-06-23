@@ -10,67 +10,80 @@
         android:id="@+id/etPasswordMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="434dp" />
+        app:layout_constraintStart_toStartOf="@+id/etUsernameMain"
+        app:layout_constraintTop_toBottomOf="@+id/etUsernameMain" />
 
     <Button
         android:id="@+id/bnLoginMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="12dp"
         android:backgroundTint="#8591072E"
-        android:onClick="login"
+        android:onClick="Login"
         android:text="Login"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="516dp" />
+        app:layout_constraintBottom_toTopOf="@+id/tvSignupLinkMain"
+        app:layout_constraintStart_toStartOf="@+id/tvSignupLinkMain" />
 
     <TextView
         android:id="@+id/tvSignupLinkMain"
         android:layout_width="121dp"
         android:layout_height="35dp"
+        android:layout_marginBottom="34dp"
         android:onClick="gotoSignup"
         android:text="register..."
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="572dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnAllRecMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnAddRecipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="46dp"
         android:backgroundTint="#8591072E"
         android:onClick="gotoAddRec"
         android:text="Add Recipe"
-        tools:layout_editor_absoluteX="263dp"
-        tools:layout_editor_absoluteY="636dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnAllRecMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="46dp"
         android:backgroundTint="#8591072E"
         android:onClick="gotoAllRecs"
         android:text="All Recipes"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="636dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etUsernameMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="372dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="427dp"
-        android:layout_height="637dp"
-        app:srcCompat="@drawable/mainActivity"
-        tools:layout_editor_absoluteX="-18dp"
-        tools:layout_editor_absoluteY="-174dp" />
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="396dp"
+        android:layout_marginBottom="393dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/salmonricerecipe" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

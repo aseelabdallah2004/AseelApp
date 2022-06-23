@@ -3,6 +3,7 @@ package com.example.signuplogin;
 import static com.google.common.reflect.Reflection.initialize;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,13 +47,50 @@ import java.util.List;
             readData();
             myCallback = new MyCallback() {
                 @Override
-                public void onCallback(List<Recipe> restsList) {
+                public void onCallback(List<Recipe> recipeList) {
                     RecyclerView recyclerView = findViewById(R.id.rvRecipesAllRec);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                     adapter = new AdapterRecipe(getApplicationContext(), recs);
                     recyclerView.setAdapter(adapter);
                 }
             };
+            ActionBar actionBar = getSupportActionBar();
+
+            actionBar.setTitle("A cup of yum");
+            actionBar.setDisplayUseLogoEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(true);
+        }
+
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.toolbar, menu);
+            return true;
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            switch (item.getItemId()) {
+                //case R.id.miSearch:
+                // User chose the "Settings" item, show the app settings UI...
+                //return true;
+
+                case R.id.miSignup:
+                    // User chose the "Favorite" action, mark the current item
+                    // as a favorite...
+                    return true;
+
+                case R.id.miAddRecipe:
+
+                    return true;
+
+                default:
+                    // If we got here, the user's action was not recognized.
+                    // Invoke the superclass to handle it.
+                    return super.onOptionsItemSelected(item);
+
+            }
+        }
 
 
             // set up the RecyclerView
@@ -58,7 +99,7 @@ import java.util.List;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new AdapterRestaurant(this, rests);
         recyclerView.setAdapter(adapter);*/
-        }
+
 
         private void readData() {
             try {

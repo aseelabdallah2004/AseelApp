@@ -53,31 +53,26 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // TODO: commands if successful
+                            Intent i = new Intent(MainActivity.this, AllRecipesActivity.class);
+                            startActivity(i);
+
                         } else {
-
-
-                            Toast.makeText(MainActivity.this, "Username or password is empty!", Toast.LENGTH_SHORT).show();
-                            return;
+                            Toast.makeText(MainActivity.this, R.string.err_incorrect_user_password, Toast.LENGTH_SHORT).show();
                         }
-
-
                     }
                 });
-
 
     }
     public void gotoSignup(View view) {
         Intent i = new Intent(this, SignupActivity.class);
         startActivity(i);
     }
-
-    public void gotoAddRest(View view) {
+    public void gotoAddRec(View view) {
         Intent i = new Intent(this, AddRecActivity.class);
         startActivity(i);
     }
 
-    public void gotoAllRests(View view) {
+    public void gotoAllRecs(View view) {
         Intent i = new Intent(this, AllRecipesActivity.class);
         startActivity(i);
     }

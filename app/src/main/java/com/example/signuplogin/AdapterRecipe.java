@@ -30,6 +30,7 @@ public class AdapterRecipe extends RecyclerView.Adapter<AdapterRecipe.ViewHolder
             // goto details activity
             Intent i = new Intent(context, RecDetailsActivity.class);
             i.putExtra("rec", rec);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
         }
     };
