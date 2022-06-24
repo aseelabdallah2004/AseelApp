@@ -8,83 +8,109 @@
 
     <EditText
         android:id="@+id/etPasswordMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_width="190dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="13dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/etUsernameMain"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/bnLoginMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUsernameMain" />
 
     <Button
         android:id="@+id/bnLoginMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="12dp"
-        android:backgroundTint="#8591072E"
+        android:layout_width="128dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#ffffff"
         android:onClick="Login"
         android:text="Login"
+        android:textColor="#8591072E"
         app:layout_constraintBottom_toTopOf="@+id/tvSignupLinkMain"
-        app:layout_constraintStart_toStartOf="@+id/tvSignupLinkMain" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordMain" />
 
     <TextView
         android:id="@+id/tvSignupLinkMain"
-        android:layout_width="121dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="34dp"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="39dp"
         android:onClick="gotoSignup"
         android:text="register..."
-        app:layout_constraintBottom_toTopOf="@+id/btnAllRecMain"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddRecipe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bnLoginMain" />
 
     <Button
         android:id="@+id/btnAddRecipe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="46dp"
+        android:layout_width="137dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="70dp"
         android:backgroundTint="#8591072E"
         android:onClick="gotoAddRec"
         android:text="Add Recipe"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAllRecMain"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignupLinkMain" />
 
     <Button
         android:id="@+id/btnAllRecMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="46dp"
+        android:layout_width="161dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="169dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="77dp"
         android:backgroundTint="#8591072E"
         android:onClick="gotoAllRecs"
         android:text="All Recipes"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/btnAddRecipe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordMain" />
 
     <EditText
         android:id="@+id/etUsernameMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_width="187dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="18dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/etPasswordMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="396dp"
-        android:layout_marginBottom="376dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="413dp"
+        android:layout_height="297dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/etUsernameMain"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/salmonricerecipe" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -47,6 +48,7 @@ public class AddRecActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_rec);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
 
         //getSupportActionBar().hide();
         connectComponents();
@@ -89,10 +91,15 @@ public class AddRecActivity extends AppCompatActivity {
         Recipe rec = new Recipe(name, description, Ingredient, Nutrition, dietartInfo, steps, RecipeType.valueOf(category), photo);
         fbs.getFirestore().collection("recipes")
                 .add(rec)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>()
+                        {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                        //  TODO: goto all activity
+                        Intent i = new Intent( getApplicationContext(), AllRecipesActivity.class);
+                        startActivity(i);
+
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

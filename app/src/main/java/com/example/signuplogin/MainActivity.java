@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
         etUsername=findViewById(R.id.etUsernameMain);
         etPassword=findViewById(R.id.etPasswordMain);
         fbs=FirebaseServices.getInstance();
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Login(View view) {
-        String username = etUsername.getText().toString();
+        String username = etUsername.getText().toString().toLowerCase();
         String password = etPassword.getText().toString();
         // TODO: 2- Data validation
         if (username.trim().isEmpty() || password.trim().isEmpty()) {
@@ -68,8 +70,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void gotoAddRec(View view) {
-        Intent i = new Intent(this, AddRecActivity.class);
-        startActivity(i);
+        if (fbs.getAuth().getCurrentUser().getEmail().equals("aseelabd512004@gmail.com")) {
+            Intent i = new Intent(this, AddRecActivity.class);
+            startActivity(i);
+        }
+        else
+        {
+            Toast.makeText(MainActivity.this, "You're not admin. Cannot add recipies!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void gotoAllRecs(View view) {

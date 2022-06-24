@@ -47,18 +47,19 @@ import java.util.List;
             fbs = FirebaseServices.getInstance();
             recs = new ArrayList<Recipe>();
             readData();
+            if (recs.size() == 0)
+                fillRecipes();
             myCallback = new MyCallback() {
-                @Override
-                public void onCallback(List<Recipe> recipeList) {
-                    RecyclerView recyclerView = findViewById(R.id.rvRecsAllRec);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                    adapter = new AdapterRecipe(getApplicationContext(), recs);
-                    recyclerView.setAdapter(adapter);
-                }
+                    @Override
+                    public void onCallback(List<Recipe> recipeList) {
+                        RecyclerView recyclerView = findViewById(R.id.rvRecsAllRec);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                        adapter = new AdapterRecipe(getApplicationContext(), recs);
+                        recyclerView.setAdapter(adapter);
+                    }
             };
 
         }
-
 
 
         @Override
@@ -93,7 +94,7 @@ import java.util.List;
         }
 
 
-            // set up the RecyclerView
+        // set up the RecyclerView
         /*
         RecyclerView recyclerView = findViewById(R.id.rvRestsAllRest);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -120,10 +121,17 @@ import java.util.List;
                                 }
                             }
                         });
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 Toast.makeText(getApplicationContext(), "error reading!" + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
+        }
+
+        public void fillRecipes()
+        {
+            Recipe rp1 = new Recipe();
+            //Recipe rp1 = new Recipe();
+            //Recipe rp1 = new Recipe();
+
+            recs.add(rp1);
         }
     }
