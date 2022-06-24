@@ -57,11 +57,11 @@
 
     <Button
         android:id="@+id/btnAddRecipe"
-        android:layout_width="137dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="70dp"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="44dp"
         android:backgroundTint="#8591072E"
         android:onClick="gotoAddRec"
         android:text="Add Recipe"
@@ -72,19 +72,19 @@
 
     <Button
         android:id="@+id/btnAllRecMain"
-        android:layout_width="161dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="169dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="77dp"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="73dp"
         android:backgroundTint="#8591072E"
         android:onClick="gotoAllRecs"
         android:text="All Recipes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAddRecipe"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordMain" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSignupLinkMain" />
 
     <EditText
         android:id="@+id/etUsernameMain"

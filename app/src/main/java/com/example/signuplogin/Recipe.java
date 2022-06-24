@@ -13,11 +13,11 @@ public class Recipe implements Serializable {
         private  RecipeType category;
         private String photo;
 
-     public Recipe(){
+     public Recipe(String salmon_rice_bowl, String s, String s1, String s2, String s3, String s5, String s6, RecipeType lunch, String s4){
 
     }
 
-        public Recipe(String name, String description, String ingredients, String nutrition, String dietartInfo, String steps, RecipeType category, String photo) {
+        public Recipe(String name, String description, String ingredients, String s, String s1, String s2, RecipeType breakfast, String s3) {
             this.name = name;
             this.description = description;
             this.ingredients = ingredients;

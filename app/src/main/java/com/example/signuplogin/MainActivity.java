@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     private EditText etUsername,etPassword;
@@ -30,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         etPassword=findViewById(R.id.etPasswordMain);
         fbs=FirebaseServices.getInstance();
         utils = Utilities.getInstance();
+    }
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = fbs.getAuth().getCurrentUser();
+        if (currentUser != null)
+            gotoAllRecs(null);
     }
 
     public void Login(View view) {
