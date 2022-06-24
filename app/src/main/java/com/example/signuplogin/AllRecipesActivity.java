@@ -42,6 +42,8 @@ import java.util.List;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_all_recipes);
             this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+            ActionBar actionBar = getSupportActionBar();
+
 
 
             fbs = FirebaseServices.getInstance();
@@ -58,6 +60,10 @@ import java.util.List;
                         recyclerView.setAdapter(adapter);
                     }
             };
+            actionBar.setTitle("  A cup of yum");
+            actionBar.setDisplayUseLogoEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(true);
+
 
         }
 
